@@ -28,9 +28,9 @@ public class Celular implements Precedente<Celular>{
 
     @Override
     public int precedeA(Celular celular) {
-        int comparison = this.number.compareTo(celular.getNumber());
+        int comparison = this.holder.compareTo(celular.getHolder());
         if(comparison == 0) {
-            return this.holder.compareTo(celular.getHolder());
+            return this.number.compareTo(celular.getNumber());
         }
         return comparison;
     }

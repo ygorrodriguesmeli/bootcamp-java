@@ -11,9 +11,9 @@ public class Pessoa implements Precedente<Pessoa> {
     }
 
     public int precedeA (Pessoa pessoa) {
-        int comparison = this.cpf.compareTo(pessoa.getCpf());
+        int comparison = this.nome.compareTo(pessoa.getNome());
         if(comparison == 0) {
-            return this.nome.compareTo(pessoa.getNome());
+            return this.cpf.compareTo(pessoa.getCpf());
         }
         return comparison;
     }
